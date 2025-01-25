@@ -71,3 +71,21 @@ function calculateDayOfWeek(date) {
     // We want the result to always be a positive number between 0 and 6
     return (d + 7) % 7; 
 }
+
+// Function to get the Akan name based on the day of the week and gender
+function getAkanName(dayOfWeek, gender) {
+    // List of male Akan names for each day of the week (Sunday to Saturday)
+    const maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+
+    // List of female Akan names for each day of the week (Sunday to Saturday)
+    const femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+
+    // Check if the gender is male, then return the corresponding male name
+    if (gender === "male") return maleNames[dayOfWeek];
+
+    // Check if the gender is female, then return the corresponding female name
+    if (gender === "female") return femaleNames[dayOfWeek];
+
+    // If something goes wrong (like an invalid gender), return null
+    return null;
+}
