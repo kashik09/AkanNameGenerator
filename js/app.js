@@ -1,22 +1,39 @@
+// Add an event listener to the form so we can process it when the user submits
 document.getElementById("akan-form").addEventListener("submit", function (e) {
+    // Prevent the page from reloading when the form is submitted
     e.preventDefault();
 
+    // Get the user's birthday from the input field
     const birthday = document.getElementById("birthday").value;
+
+    // Get the selected gender from the dropdown
     const gender = document.getElementById("gender").value;
+
+    // Get the output div where we will show the result
     const output = document.getElementById("output");
 
+    // Check if the user forgot to enter their birthday or gender
     if (!birthday || !gender) {
+        // Let the user know they need to fill in both fields
         output.innerHTML = "<p>Please enter a valid date and select your gender.</p>";
-        return;
+        return; // Stop the rest of the code from running
     }
 
+    // Convert the birthday string into a Date object
     const date = new Date(birthday);
+
+    // Calculate the day of the week they were born on
     const dayOfWeek = calculateDayOfWeek(date);
 
+    // Get their Akan name based on the day of the week and gender
     const akanName = getAkanName(dayOfWeek, gender);
+
+    // Check if we successfully got an Akan name
     if (akanName) {
+        // Show the user their Akan name in the output div
         output.innerHTML = `<p>Your Akan name is <strong>${akanName}</strong>.</p>`;
     } else {
+        // Show an error message if something went wrong
         output.innerHTML = "<p>Something went wrong. Please try again.</p>";
     }
 });
