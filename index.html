@@ -16,7 +16,22 @@
         </nav>
     </header>
     <main>
-
+        <form id="akan-form">
+            <h2>Discover Your Akan Name</h2>
+            <label for="birthday">Enter Your Birthday:</label>
+            <input type="date" id="birthday" name="birthday" required>
+            
+            <label for="gender">Select Your Gender:</label>
+            <select id="gender" name="gender" required>
+              <option value="" disabled selected>Select your gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+            
+            <button type="submit">Find My Akan Name</button>
+          </form>
+          
+          <div id="output"></div>
     </main>
     <footer>
         <div>

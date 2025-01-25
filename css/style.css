@@ -5,7 +5,7 @@
 }
 
 /* basic typography */
-p {
+body, p, label, input, button {
     font-family: "Raleway", serif;
     font-optical-sizing: auto;
     font-style: normal;
