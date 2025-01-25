@@ -4,6 +4,26 @@
 
 }
 
+/* colours */
+header {
+    background-color: #ffd54f;
+    color: #5d4037;
+}
+
+body {
+    background-color: #fff8e1;
+    color: #5d4037;
+}
+
+footer {
+    background-color: #f57c00;
+    color: #fff9c4;
+}
+
+.highlight {
+    color: #fff9c4;
+}
+
 /* basic typography */
 body, p, label, input, button {
     font-family: "Raleway", serif;
