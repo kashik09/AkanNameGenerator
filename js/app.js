@@ -36,6 +36,12 @@ document.getElementById("akan-form").addEventListener("submit", function (e) {
     // Convert the birthday string into a Date object
     const date = new Date(birthday);
 
+    // Fix: Added validation for invalid dates to avoid errors when parsing the date
+    if (isNaN(date.getTime())) {
+        output.innerHTML = "<p>The date entered is invalid. Please try again.</p>";
+        return; // Stop further execution if the date is invalid
+    }
+
     // Calculate the day of the week they were born on
     const dayOfWeek = calculateDayOfWeek(date);
 
@@ -89,16 +95,19 @@ function calculateDayOfWeek(date) {
 // Function to get the Akan name based on the day of the week and gender
 function getAkanName(dayOfWeek, gender) {
     // List of male Akan names for each day of the week (Sunday to Saturday)
-    const maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+    const maleAkanNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 
     // List of female Akan names for each day of the week (Sunday to Saturday)
-    const femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+    const femaleAkanNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+
+    // Adjust the dayOfWeek to match the array indices for Zeller's Congruence
+    const adjustedDay = (dayOfWeek === 0) ? 6 : dayOfWeek - 1; // Adjust Sunday (0) to align with Saturday (6)
 
     // Check if the gender is male, then return the corresponding male name
-    if (gender === "male") return maleNames[dayOfWeek];
+    if (gender === "male") return maleAkanNames[adjustedDay];
 
     // Check if the gender is female, then return the corresponding female name
-    if (gender === "female") return femaleNames[dayOfWeek];
+    if (gender === "female") return femaleAkanNames[adjustedDay];
 
     // If something goes wrong (like an invalid gender), return null
     return null;
