@@ -1,3 +1,17 @@
+// Hamburger Menu
+// Select the hamburger menu button
+const hamburger = document.querySelector('.hamburger-menu');
+
+// Select the navigation menu
+const navMenu = document.querySelector('.nav-menu');
+
+// Add an event listener to the hamburger button to listen for clicks
+hamburger.addEventListener('click', () => {
+    // Toggle the 'show' class on the nav menu to make it slide in and out
+    navMenu.classList.toggle('show');
+});
+
+// Form
 // Add an event listener to the form so we can process it when the user submits
 document.getElementById("akan-form").addEventListener("submit", function (e) {
     // Prevent the page from reloading when the form is submitted
