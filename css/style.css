@@ -28,68 +28,11 @@ footer {
     color: #fff9c4;
 }
 
+/* Typography */
 h1 h2 h3 h4 h5 h6 {
     font-family: "Crimson Pro", serif;
     font-optical-sizing: auto;
     font-style: normal;
-}
-
-/* Navigation */
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-    background-color: #ffd54f;
-    color: #5d4037;
-    height: 4rem;
-}
-
-.hamburger-menu {
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: #5d4037;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-    z-index: 1000;
-}
-
-.hamburger-menu:hover {
-    transform: scale(1.1);
-}
-
-.nav-menu {
-    position: fixed;
-    top: 4rem;
-    right: 0;
-    background-color: #fff8e1;
-    width: 100%;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    transform: translateX(100%);
-    transition: transform 0.4s ease-in-out;
-}
-
-.nav-menu a {
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: #5d4037;
-    padding: 0.5rem 1rem;
-    transition: background 0.3s;
-}
-
-.nav-menu a:hover {
-    background-color: #f57c00;
-    color: #fff;
-}
-
-.nav-menu.show {
-    transform: translateX(0);
 }
 
 /* Intro Section */
@@ -186,31 +129,18 @@ button:hover {
 /* Media Queries */
 
 /* Mobile (360px) */
-/* hamburger */
 @media (max-width: 360px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0.5rem;
+    header {
+        font-size: 1.2rem;
     }
 
-    .nav-menu {
-        font-size: 1rem;
-    }
-
-    /* intro */
     .intro-section {
         padding: 1rem;
         font-size: 0.9rem;
     }
 
-    /* form */
     .form-section {
         padding: 1rem;
-    }
-
-    form {
-        gap: 0.6rem;
     }
 
     input, select, button {
@@ -229,13 +159,11 @@ button:hover {
 }
 
 /* Tablet (768px) */
-/* hamburger */
 @media (max-width: 768px) {
-    .navbar {
-        flex-wrap: wrap;
+    header {
+        font-size: 1.5rem;
     }
 
-    /* intro */
     .intro-section {
         padding: 1.5rem;
     }
@@ -248,13 +176,8 @@ button:hover {
         font-size: 1rem;
     }
 
-    /* form */
     .form-section {
         padding: 1.5rem;
-    }
-
-    form {
-        gap: 0.8rem;
     }
 
     input, select, button {
@@ -273,7 +196,6 @@ button:hover {
 }
 
 /* Desktop (1024px) */
-/* intro */
 @media (min-width: 1024px) {
     .intro-section {
         padding: 2rem;
@@ -281,7 +203,6 @@ button:hover {
         margin: 0 auto;
     }
 
-    /* form */
     .form-section {
         padding: 2rem;
         max-width: 600px;
