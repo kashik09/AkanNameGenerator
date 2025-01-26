@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Global Styles */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-/* colours */
-header {
-    background-color: #ffd54f;
-    color: #5d4037;
-}
-
 body {
     background-color: #fff8e1;
+    color: #5d4037;
+    font-family: "Raleway", serif;
+}
+
+/* Colours */
+header {
+    background-color: #ffd54f;
     color: #5d4037;
 }
 
@@ -26,27 +28,13 @@ footer {
     color: #fff9c4;
 }
 
-/* basic typography */
-body, p, label, input, button {
-    font-family: "Raleway", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
-
 h1 h2 h3 h4 h5 h6 {
     font-family: "Crimson Pro", serif;
     font-optical-sizing: auto;
     font-style: normal;
 }
 
-
-/* navigation */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
+/* Navigation */
 .navbar {
     display: flex;
     align-items: center;
@@ -77,7 +65,6 @@ body {
     right: 0;
     background-color: #fff8e1;
     width: 100%;
-    /* max-width: 250px; */
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
@@ -105,11 +92,11 @@ body {
     transform: translateX(0);
 }
 
-/* intro-section */
+/* Intro Section */
 .intro-section {
     padding: 2rem;
-    background-color: #ffd54f; /* Matches the header background */
-    color: #5d4037; /* Matches text color */
+    background-color: #ffd54f;
+    color: #5d4037;
     text-align: center;
     font-family: "Raleway", serif;
     border-bottom: 2px solid #5d4037;
@@ -141,21 +128,16 @@ body {
     line-height: 1.4;
 }
 
-.intro-section strong {
-    color: #f57c00; /* Highlight important words */
-}
-
-
-/* form section */
+/* Form Section */
 .form-section {
     padding: 2rem;
     text-align: center;
-    background-color: #fff8e1; /* Matches body background */
-    color: #5d4037; /* Matches body text color */
+    background-color: #fff8e1;
+    color: #5d4037;
 }
 
 .form-section h1 {
-    font-family: "Crimson Pro", serif; /* Matches header typography */
+    font-family: "Crimson Pro", serif;
     font-size: 2rem;
     margin-bottom: 1.5rem;
 }
@@ -201,30 +183,72 @@ button:hover {
     color: #5d4037;
 }
 
-/* media queries */
+/* Media Queries */
+
+/* Mobile (360px) */
 /* hamburger */
-@media screen and (min-width: 768px) {
-    .hamburger-menu {
-        display: none;
+@media (max-width: 360px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem;
     }
 
     .nav-menu {
-        position: static;
-        transform: none;
-        flex-direction: row;
-        gap: 2rem;
-        box-shadow: none;
-        background-color: transparent;
+        font-size: 1rem;
     }
 
-    .nav-menu a:hover {
-        background-color: transparent;
-        color: #f57c00;
+    /* intro */
+    .intro-section {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* form */
+    .form-section {
+        padding: 1rem;
+    }
+
+    form {
+        gap: 0.6rem;
+    }
+
+    input, select, button {
+        max-width: 200px;
+        padding: 0.3rem;
+        font-size: 0.8rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    #output {
+        font-size: 0.9rem;
     }
 }
 
-/* form */
+/* Tablet (768px) */
+/* hamburger */
 @media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    /* intro */
+    .intro-section {
+        padding: 1.5rem;
+    }
+
+    .intro-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .intro-section p, .intro-section li {
+        font-size: 1rem;
+    }
+
+    /* form */
     .form-section {
         padding: 1.5rem;
     }
@@ -233,9 +257,7 @@ button:hover {
         gap: 0.8rem;
     }
 
-    input,
-    select,
-    button {
+    input, select, button {
         max-width: 250px;
         padding: 0.4rem;
         font-size: 0.9rem;
@@ -250,59 +272,32 @@ button:hover {
     }
 }
 
-@media (max-width: 480px) {
+/* Desktop (1024px) */
+/* intro */
+@media (min-width: 1024px) {
+    .intro-section {
+        padding: 2rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    /* form */
     .form-section {
-        padding: 1rem;
+        padding: 2rem;
+        max-width: 600px;
+        margin: 0 auto;
     }
 
-    form {
-        gap: 0.6rem;
-    }
-
-    input,
-    select,
-    button {
-        max-width: 220px;
-        padding: 0.3rem;
-        font-size: 0.8rem;
+    input, select, button {
+        max-width: 300px;
+        padding: 0.5rem;
     }
 
     button {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
     }
 
     #output {
-        font-size: 0.9rem;
-    }
-}
-
-/* intro */
-@media (max-width: 768px) {
-    .intro-section {
-        padding: 1.5rem;
-    }
-
-    .intro-section h2 {
-        font-size: 1.8rem;
-    }
-
-    .intro-section p,
-    .intro-section li {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .intro-section {
-        padding: 1rem;
-    }
-
-    .intro-section h2 {
-        font-size: 1.5rem;
-    }
-
-    .intro-section p,
-    .intro-section li {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
     }
 }
