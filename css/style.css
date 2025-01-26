@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Global Styles */
 * {
     padding: 0;
     margin: 0;
@@ -13,18 +12,18 @@ body {
     font-family: "Raleway", serif;
 }
 
-/* Colours */
 header {
     background-color: #ffd54f;
     color: #5d4037;
+    padding: 1rem 2rem; /* Added padding for alignment */
+    text-align: left;
+    font-family: "Crimson Pro", serif;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #5d4037;
 }
 
 footer {
     background-color: #f57c00;
-    color: #fff9c4;
-}
-
-.highlight {
     color: #fff9c4;
 }
 
@@ -37,12 +36,13 @@ h1 h2 h3 h4 h5 h6 {
 
 /* Intro Section */
 .intro-section {
-    padding: 2rem;
     background-color: #ffd54f;
     color: #5d4037;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
     text-align: center;
-    font-family: "Raleway", serif;
-    border-bottom: 2px solid #5d4037;
 }
 
 .intro-section h2 {
@@ -127,7 +127,6 @@ button:hover {
 }
 
 /* Media Queries */
-
 /* Mobile (360px) */
 @media (max-width: 360px) {
     header {
