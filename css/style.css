@@ -109,6 +109,61 @@ body {
     transform: translateX(0);
 }
 
+/* form section */
+.form-section {
+    padding: 2rem;
+    text-align: center;
+    background-color: #fff8e1; /* Matches body background */
+    color: #5d4037; /* Matches body text color */
+}
+
+.form-section h1 {
+    font-family: "Crimson Pro", serif; /* Matches header typography */
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+label {
+    font-size: 1.2rem;
+}
+
+input, select, button {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.5rem;
+    border: 2px solid #5d4037;
+    border-radius: 5px;
+    font-family: "Raleway", serif;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #f57c00;
+    color: #fff9c4;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+button:hover {
+    background-color: #5d4037;
+    color: #ffd54f;
+}
+
+#output {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #5d4037;
+}
+
 /* media queries */
 /* hamburger */
 @media screen and (min-width: 768px) {
@@ -128,5 +183,58 @@ body {
     .nav-menu a:hover {
         background-color: transparent;
         color: #f57c00;
+    }
+}
+
+/* form */
+@media (max-width: 768px) {
+    .form-section {
+        padding: 1.5rem;
+    }
+
+    form {
+        gap: 0.8rem;
+    }
+
+    input,
+    select,
+    button {
+        max-width: 250px;
+        padding: 0.4rem;
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    #output {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-section {
+        padding: 1rem;
+    }
+
+    form {
+        gap: 0.6rem;
+    }
+
+    input,
+    select,
+    button {
+        max-width: 220px;
+        padding: 0.3rem;
+        font-size: 0.8rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    #output {
+        font-size: 0.9rem;
     }
 }
