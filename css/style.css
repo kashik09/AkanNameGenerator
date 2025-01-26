@@ -109,6 +109,47 @@ body {
     transform: translateX(0);
 }
 
+/* intro-section */
+.intro-section {
+    padding: 2rem;
+    background-color: #ffd54f; /* Matches the header background */
+    color: #5d4037; /* Matches text color */
+    text-align: center;
+    font-family: "Raleway", serif;
+    border-bottom: 2px solid #5d4037;
+}
+
+.intro-section h2 {
+    font-family: "Crimson Pro", serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.intro-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.intro-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 1.5rem auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+.intro-section li {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+
+.intro-section strong {
+    color: #f57c00; /* Highlight important words */
+}
+
+
 /* form section */
 .form-section {
     padding: 2rem;
@@ -235,6 +276,37 @@ button:hover {
     }
 
     #output {
+        font-size: 0.9rem;
+    }
+}
+
+/* intro */
+@media (max-width: 768px) {
+    .intro-section {
+        padding: 1.5rem;
+    }
+
+    .intro-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .intro-section p,
+    .intro-section li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-section {
+        padding: 1rem;
+    }
+
+    .intro-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .intro-section p,
+    .intro-section li {
         font-size: 0.9rem;
     }
 }
